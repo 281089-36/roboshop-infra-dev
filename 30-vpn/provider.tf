@@ -4,11 +4,12 @@ terraform {
       source = "hashicorp/aws"
       version = "5.98.0"
     }
-  } 
+  }
 
-backend "s3" {
+
+  backend "s3" {
     bucket = "divs-remote-state-dev"
-    key    = "roboshop-dev-vpc"
+    key    = "roboshop-dev-vpn"
     region = "us-east-1"
     encrypt      = true
     use_lockfile = true
@@ -18,4 +19,4 @@ backend "s3" {
 provider "aws" {
   # Configuration options
   region = "us-east-1"
-}
+}  
